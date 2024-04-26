@@ -1,0 +1,13 @@
+.bg-offwhite{
+    background-color: #faefe0;
+}
+
+.home-page .hero-image{
+    background-image: url(/assets/img/home-hero-image.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 600px;
+    background-color: #cccccc;
+}

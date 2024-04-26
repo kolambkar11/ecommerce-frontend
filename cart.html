@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ecommerce Template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/78bc152633.js" crossorigin="anonymous"></script>
+        <style>
+            ul.breadcrumb {
+                padding: 10px 16px;
+                list-style: none;
+                background-color: #eee;
+            }
+            ul.breadcrumb li {
+                display: inline;
+                font-size: 18px;
+            }
+            ul.breadcrumb li+li:before {
+                padding: 8px;
+                color: black;
+                content: "/\00a0";
+            }
+            ul.breadcrumb li a {
+                color: #0275d8;
+                text-decoration: none;
+            }
+            ul.breadcrumb li a:hover {
+                color: #01447e;
+                text-decoration: underline;
+            }
+            .cart-item{
+                padding: 10px;
+                border-radius: 10px;
+                transition: .5s;
+                cursor: pointer;
+                margin-bottom: 10px;
+                box-shadow: 0px 0px 5px 0px #ccc;
+            }
+            .cart-item:hover{
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px 0px #ccc;
+            }
+            .custom-size-dp{
+                text-align: center;
+                font-size: 14px;
+                border: thin solid #ccc;
+                border-radius: 10px;
+                padding: 0px 10px;
+            }
+            .order-summary{
+                padding: 10px;
+                border-radius: 10px;
+                transition: .5s;
+                cursor: pointer;
+                margin-bottom: 10px;
+                box-shadow: 0px 0px 5px 0px #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-white text-dark navbar-light p-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Brand Name</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products.html">Catalog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <i class="fas fa-user-alt text-dark align-content-center mx-3"></i>
+                        <a href="cart.html" class="align-content-center mx-3 text-dark"><i class="fas fa-shopping-cart  "></i></a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <ul class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li>My Cart</li>
+        </ul>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center mb-3">
+                        <h1>My Cart</h1>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="cart-item">
+                            <div class="row">
+                                <div class="col-4 col-sm-2">
+                                    <img src="/assets/img/1.png" class="img-fluid rounded" alt="">
+                                </div>
+                                <div class="col-8 col-sm-7">
+                                    <h5 class="mb-0">Handmade The Chico Messenger</h5>
+                                    <p class="text-secondary">Handmade, Leather backpack, Travel bag</p>
+                                    <label class="mb-0">Size :</label>
+                                    <select name="" class="custom-size-dp form-control-sm" id="" >
+                                        <option value="">25L</option>
+                                        <option value="">30L</option>
+                                        <option value="">35L</option>
+                                    </select>
+                                    <label class="">Quantity :</label>
+                                    <select name="" class="custom-size-dp form-control-sm" id="" >
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-3 text-end ">
+                                    <h3>$149.00</h3>
+                                    <button class="btn btn-sm border-danger text-danger"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="order-summary">
+                            <h4 class="text-center mb-4">Order Summary</h4>
+                                <label for="promo-code">Apply Promo Code</label>
+                                <input type="text" name="" placeholder="Enter Promo Code" class="form-control mb-4" id="">
+                                <p>Cart Total: <span class="float-end">$525.41</span></p>
+                                <p>Cart Total Discount: <span class="float-end">$525.41</span></p>
+                                <p>Delivery Fees: <span class="float-end">$525.41</span></p>
+                                <p>Promo Code Saving: <span class="float-end">$525.41</span></p>
+                                <hr>
+                                <h4>Total: <span class="float-end">$525.41</span></h4>
+                                <button class="btn btn-danger col-12">Check Out</button>
+                        </div>
+                        <div class="order-summary">
+                            <h4 class="text-center mb-4">Order Information</h4>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Return & Refund Policy 
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            This is our example return policy which is everything you need to know about returns.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Shipping Options
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            This is our example return policy which is everything you need to know about returns.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="p-1">
+            <div class="container text-center ">
+                <h1 class="p-4">Recently Viewed Products</h1>
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/1.png" class="img-fluid rounded" alt="">
+                        <p class="mt-3">Backpacks</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/2.png" class="img-fluid rounded" alt="">
+                        <p class="mt-3">Laptop bags</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/3.png" class="img-fluid rounded" alt="">
+                        <p class="mt-3">Leather Handbags</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/3.png" class="img-fluid rounded" alt="">
+                        <p class="mt-3">Leather Handbags</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
+                <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <i class="fab fa-twitter text-dark align-content-center mx-3"></i>
+                    <i class="fab fa-facebook text-dark align-content-center mx-3"></i>
+                    <i class="fab fa-instagram text-dark align-content-center mx-3"></i>
+                </a>
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Catalog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+</html>
